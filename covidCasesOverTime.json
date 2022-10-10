@@ -18,7 +18,7 @@
     {
       "filter": {
         "and": [
-          "datum.country == 'Africa'||datum.country=='Asia'||datum.country=='South America'||datum.country=='Europe'||datum.country=='Oceania'||datum.country=='North America'"
+          "datum.continent == 'Africa'||datum.continent=='Asia'||datum.continent=='South America'||datum.continent=='Europe'||datum.continent=='Oceania'||datum.continent=='North America'"
         ]
       }
     }
