@@ -1,7 +1,8 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
   "data": {
-    "url": "https://raw.githubusercontent.com/johnstonw/johnstonw.github.io/main/owid-covid-data.csv"
+    "url": "https://raw.githubusercontent.com/johnstonw/johnstonw.github.io/main/owid-covid-data.csv",
+    "format": {"type": "csv"}
   },
   "title": {"text": "COVID19 Cases/Deaths (2020-2022)", "fontSize": 25},
   "width": 600,
