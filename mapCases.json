@@ -6,7 +6,7 @@
   "params": [
     {
       "name": "year_selection",
-      "value": 2005,
+      "value": 2020,
       "bind": {
         "input": "range",
         "min": 2020,
@@ -17,7 +17,7 @@
     }
   ],
   "data": {
-    "url": "https://github.com/johnstonw/johnstonw.github.io/blob/main/map.topojson",
+    "url": "https://raw.githubusercontent.com/johnstonw/johnstonw.github.io/main/map.topojson",
     "format": {"type": "topojson", "feature": "customMap"}
   },
   "transform": [
@@ -25,32 +25,20 @@
       "lookup": "properties.name",
       "from": {
         "data": {
-          "url": "https://github.com/johnstonw/johnstonw.github.io/blob/main/owid-covid-data.csv",
-          "name": "myData"
+          "url": "https://raw.githubusercontent.com/johnstonw/johnstonw.github.io/main/owid-covid-data.csv"
         },
         "key": "location",
-        "fields": [
-          "date"
-        ]
+        "fields": ["total_cases"]
       }
     },
-    {"calculate": "datum[year_selection]", "as": "Year"}
   ],
-  "layer": [
-    {
-      "projection": {"type": "equalEarth"},
-      "mark": {"type": "geoshape", "fill": "lightgray", "stroke": "white"}
-    },
-    {
-      "projection": {"type": "equalEarth"},
-      "mark": {"type": "geoshape"},
+  "mark": {"type": "geoshape"},
       "encoding": {
         "tooltip": [
           {"field": "properties.name", "type": "nominal", "title": "Country"},
           {
-            "field": "Year",
+            "field": "date",
             "type": "quantitative",
-            "format": ".3",
             "title": "Number of Cases"
           }
         ],
@@ -61,7 +49,7 @@
           "scale": {
             "type": "bin-ordinal",
             "scheme": "reds",
-            "domain": [0, 1000]
+            "domain": [0, 100000000]
           },
           "legend": {
             "titleOrient": "top",
@@ -70,10 +58,7 @@
             "legendX": 275,
             "legendY": 350,
             "titleAlign": "left"
+            }
           }
         }
       }
-    }
-  ],
-  "config": {}
-}
