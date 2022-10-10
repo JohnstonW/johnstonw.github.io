@@ -1,0 +1,79 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "width": 800,
+  "height": 450,
+  "title": "Map of Recorded COVID-19 Cases",
+  "params": [
+    {
+      "name": "year_selection",
+      "value": 2005,
+      "bind": {
+        "input": "range",
+        "min": 2020,
+        "max": 2022,
+        "step": 1,
+        "name": "Year"
+      }
+    }
+  ],
+  "data": {
+    "url": "https://github.com/johnstonw/johnstonw.github.io/blob/main/map.topojson",
+    "format": {"type": "topojson", "feature": "customMap"}
+  },
+  "transform": [
+    {
+      "lookup": "properties.name",
+      "from": {
+        "data": {
+          "url": "https://github.com/johnstonw/johnstonw.github.io/blob/main/owid-covid-data.csv",
+          "name": "myData"
+        },
+        "key": "location",
+        "fields": [
+          "date"
+        ]
+      }
+    },
+    {"calculate": "datum[year_selection]", "as": "Year"}
+  ],
+  "layer": [
+    {
+      "projection": {"type": "equalEarth"},
+      "mark": {"type": "geoshape", "fill": "lightgray", "stroke": "white"}
+    },
+    {
+      "projection": {"type": "equalEarth"},
+      "mark": {"type": "geoshape"},
+      "encoding": {
+        "tooltip": [
+          {"field": "properties.name", "type": "nominal", "title": "Country"},
+          {
+            "field": "Year",
+            "type": "quantitative",
+            "format": ".3",
+            "title": "Number of Cases"
+          }
+        ],
+        "color": {
+          "field": "Year",
+          "title": "Number of Cases",
+          "type": "quantitative",
+          "scale": {
+            "type": "bin-ordinal",
+            "scheme": "redblue",
+            "domain": [2, -2]
+          },
+          "legend": {
+            "titleOrient": "top",
+            "direction": "horizontal",
+            "orient": "none",
+            "legendX": 275,
+            "legendY": 350,
+            "titleAlign": "left"
+          }
+        }
+      }
+    }
+  ],
+  "config": {}
+}
