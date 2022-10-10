@@ -42,7 +42,7 @@
           }
         },
         "y": {
-          "field": "Covid Cases",
+          "field": "total_cases",
           "type": "quantitative",
           "scale": {"domainMin": 0}
         },
@@ -73,7 +73,7 @@
       ]
     },
     {
-      "transform": [{"pivot": "location", "value": "Covid Cases", "groupby": ["date"]}],
+      "transform": [{"pivot": "location", "value": "total_cases", "groupby": ["date"]}],
       "mark": {"type": "rule", "clip": true},
       "encoding": {
         "opacity": {
