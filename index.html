@@ -1,37 +1,130 @@
-## Welcome to GitHub Pages
+<!DOCTYPE html>
 
-You can use the [editor on GitHub](https://github.com/johnstonw/johnstonw.github.io/edit/main/index.md) to maintain and preview the content for your website in Markdown files.
+<html>
+<head>
+    <title>Covid-19</title>
+    <link rel="stylesheet" href="https://unpkg.com/purecss@2.0.3/build/pure-min.css" integrity="sha384-cg6SkqEOCV1NbJoCu11+bm0NvBRc8IYLRGXkmNrqUBfTjmMYwNKPWBTIKyw9mHNJ" crossorigin="anonymous">
+    <meta name="viewport" content="width=960, initial-scale=1">
+    
+    <script src="https://cdn.jsdelivr.net/npm/vega@5.16.1"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vega-lite@4.16.8"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vega-embed@6.12.2"></script>
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
+    <style>
+        .hor_space{
+            height: 40px;
+            background-color: lightgray
+        }
+        .hor_space_2{
+            height: 15px
+        }
+        #vis_map{
+            a
+        }
+        h1{
+            text-align: center;
+        }
+        .page{
+            max-width: 1200px;
+            margin: auto;
+        }
+        h2{
+            padding-bottom: 15px;
+        }
+        body{
+            background-color: lightgray;
+        }
+        div{
+            background-color: white;
+        }
+        #title{
+            font-family: Yu Gothic;
+            font-size: 48px;
+            padding-top: 10px;
+        }
+        p{
+            line-height: 1.4
+        }
+    </style>
+    
+</head>
 
-### Markdown
+<body>
+    <div class = "page">
+        <div class="hor_space"></div>
+        <h1 id="title">The Global Spread of Covid19</h1>
+        <div class = "hor_space"></div>
+        <div class="hor_space_2"></div>
+        <div id="map" class="pure-g">
+            <div class="pure-u-1-24"></div>
+            <div class="pure-u-7-24">
+                <h2><i>Covid19</i></h2>
+                <p>
+                   sample text
+                </p>
+            </div>
+            <div class="pure-u-2-24"></div>
+            <div class="pure-u-14-24" style="align-content: center">
+                <div id="vis_map"></div>
+            </div>
+        </div>
+        
+        <div class="hor_space_2"></div>
+        <div class = "hor_space"></div>
+        <div class="hor_space_2"></div>
+        
+        <div class="pure-g">
+            <div class="pure-u-1-24"></div>
+            <div class = "pure-u-15-24">
+                <div id="vis_gmsl"></div>
+            </div>
+            <div class="pure-u-7-24">
+                <h2><i>Covid19 Vaccinations</i></h2>
+                <p>
+                    sample text
+                </p>
+            </div>
+            <div class="pure-u-1-24"></div>
+        </div>
+        <div class="hor_space_2"></div>
+        <div class = "hor_space"></div>
+        <div class="hor_space_2"></div>
+        <div class="pure-g">
+            <div class="pure-u-1-24"></div>
+            <div class="pure-u-7-24">
+                <h2>Covid19 mapdeaths</h2>
+                <p>
+                  sample text
+              </p>
+            </div>
+            <div class="pure-u-1-24"></div>
+            <div class = "pure-u-15-24">
+                <div id="vis_co2"></div>
+            </div>
 
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
+        </div>
+        <div class="hor_space_2"></div>
+        <div class = "hor_space"></div>
+    </div>
+</body>
 
-```markdown
-Syntax highlighted code block
+    
+<script type="text/javascript">
+    var map_spec = "https://raw.githubusercontent.com/johnstonw/johnstonw.github.io/main/mapCases.json";
+    vegaEmbed('#vis_map',map_spec).then(function(result){
+    // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
+  }).catch(console.error);
+    
+    
+    var area_spec = "https://raw.githubusercontent.com/johnstonw/johnstonw.github.io/main/areaCases.json";
+    vegaEmbed('#vis_area',area_spec).then(function(result){
+    // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
+  }).catch(console.error);
+    
+    var area2_spec = "https://raw.githubusercontent.com/johnstonw/johnstonw.github.io/main/areaCases.json";
+    vegaEmbed('#vis_area2',area2_spec).then(function(result){
+    // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
+  }).catch(console.error);
+</script>    
 
-# Header 1
-## Header 2
-### Header 3
-
-- Bulleted
-- List
-
-1. Numbered
-2. List
-
-**Bold** and _Italic_ and `Code` text
-
-[Link](url) and ![Image](src)
-```
-
-For more details see [Basic writing and formatting syntax](https://docs.github.com/en/github/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax).
-
-### Jekyll Themes
-
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/johnstonw/johnstonw.github.io/settings/pages). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
-
-### Support or Contact
-
-Having trouble with Pages? Check out our [documentation](https://docs.github.com/categories/github-pages-basics/) or [contact support](https://support.github.com/contact) and we’ll help you sort it out.
+</html>
