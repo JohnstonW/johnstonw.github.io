@@ -19,12 +19,12 @@
         "fields": ["Tests"]
       }
     },
-    {"calculate": "datum.Tests + 0.1", "as": "Tests"}
+    {"calculate": "datum.Tests + 0.1", "as": "Number of Tests"}
   ],
   "mark": {"type": "geoshape"},
   "encoding": {
     "color": {
-      "field": "Tests",
+      "field": "Number of Tests",
       "type": "quantitative",
       "scale": {"type": "log"}
     },
