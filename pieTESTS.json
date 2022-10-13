@@ -20,7 +20,7 @@
             },
             "legend": {
               "orient": "none",
-              "legendX": 800,
+              "legendX": 1200,
               "legendY": 0,
               "fillColor": "white",
               "strokeColor": "black",
