@@ -1,6 +1,6 @@
 {
     "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-    "title": "Number of Tests per Continent",
+    "title": {"text": "Number of Tests per Continent", "fontSize": 25},
     "width": 600,
     "height": 400,
     "description": "Number of tests per Continent",
@@ -8,7 +8,7 @@
       "url": "https://raw.githubusercontent.com/johnstonw/johnstonw.github.io/main/fixed_year_2022_quarter_02.csv"
     },
     "mark": {"type": "arc", "innerRadius": 60},
-    
+  
     "encoding": {
       "theta": {"field": "Tests", "type": "quantitative"},
       "color": {
@@ -17,17 +17,34 @@
         "scale": {
         "domain": ["Americas", "Europe", "Africa", "Asia", "Oceania"],
           "range": ["#984ea3", "#ff7f00", "#a6cee3", "#377eb8", "#a65628"]
+            },
+            "legend": {
+              "orient": "none",
+              "legendX": 500,
+              "legendY": 0,
+              "fillColor": "white",
+              "strokeColor": "black",
+              "padding": 10,
+              "labelFontSize": 13,
+              "titleFontSize": 15
             }
           },
           
           "tooltip": [
             {"field": "Country", "type": "nominal"},
+                                {
+              "field": "Tests",
+              "type": "quantitative",
+              "title": "Number of Tests Taken",
+              "format": ","
+            },
             {
               "field": "dSpeed",
               "type": "quantitative",
               "title": "Avg Download Speed (kB/s)",
               "format": ","
             },
+  
             {
               "field": "uSpeed",
               "type": "quantitative",
@@ -38,12 +55,6 @@
               "field": "avgPop",
               "type": "quantitative",
               "title": "Population",
-              "format": ","
-            },
-            {
-              "field": "Tests",
-              "type": "quantitative",
-              "title": "Number of Tests Taken",
               "format": ","
             }
           ]

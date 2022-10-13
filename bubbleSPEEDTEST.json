@@ -2,7 +2,7 @@
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
   "width": 600,
   "height": 400,
-  "title": "Internet Speeds (Mar 2022)",
+  "title": {"text": "Internet Speeds (Mar 2022)", "fontSize": 25},
   "data": {
     "url": "https://raw.githubusercontent.com/johnstonw/johnstonw.github.io/main/fixed_year_2022_quarter_02.csv"
   },
