@@ -5,7 +5,6 @@
   "title": "Internet Usage",
   "data": {
     "url": "https://raw.githubusercontent.com/johnstonw/johnstonw.github.io/main/internetusage.csv"
-    
   },
   "params": [
     {
@@ -23,14 +22,7 @@
       "name": "Continent_selection",
       "bind": {
         "input": "select",
-        "options": [
-          null,
-          "Americas",
-          "Europe",
-          "Africa",
-          "Asia",
-          "Oceania"
-        ],
+        "options": [null, "Americas", "Europe", "Africa", "Asia", "Oceania"],
         "labels": [
           "Show All",
           "Americas",
@@ -84,31 +76,34 @@
         },
         "color": {
           "field": "continent",
-          "title" : "Continent",
+          "title": "Continent",
           "type": "nominal",
           "scale": {
-            "domain": [
-              "Americas",
-              "Europe",
-              "Africa",
-              "Asia",
-              "Oceania"
-            ],
-            "range": [
-              "#984ea3",
-              "#ff7f00",
-              "#a6cee3",
-              "#377eb8",
-              "#a65628"
-            ]
+            "domain": ["Americas", "Europe", "Africa", "Asia", "Oceania"],
+            "range": ["#984ea3", "#ff7f00", "#a6cee3", "#377eb8", "#a65628"]
           }
         },
         "opacity": {"value": 0.6},
         "tooltip": [
           {"field": "Country", "type": "nominal"},
-          {"field": "urbanrate", "type": "quantitative","title": "Urban Rate (%)","format": ","},
-          {"field": "internetuserate", "type": "quantitative", "title":"Internet Usage Rate (%)", "format": ","},
-          {"field": "Population", "type": "quantitative", "title":"Population","format": ","}
+          {
+            "field": "urbanrate",
+            "type": "quantitative",
+            "title": "Urban Rate (%)",
+            "format": ".3s"
+          },
+          {
+            "field": "internetuserate",
+            "type": "quantitative",
+            "title": "Internet Usage Rate (%)",
+            "format": ".3s"
+          },
+          {
+            "field": "Population",
+            "type": "quantitative",
+            "title": "Population",
+            "format": ","
+          }
         ]
       }
     },
@@ -133,9 +128,24 @@
         },
         "tooltip": [
           {"field": "Country", "type": "nominal"},
-          {"field": "urbanrate", "type": "quantitative","title": "Urban Rate (%)","format": ","},
-          {"field": "internetuserate", "type": "quantitative", "title":"Internet Usage Rate (%)", "format": ","},
-          {"field": "Population", "type": "quantitative", "title":"Population","format": ","}
+          {
+            "field": "urbanrate",
+            "type": "quantitative",
+            "title": "Urban Rate (%)",
+            "format": ".3s"
+          },
+          {
+            "field": "internetuserate",
+            "type": "quantitative",
+            "title": "Internet Usage Rate (%)",
+            "format": ".3s"
+          },
+          {
+            "field": "Population",
+            "type": "quantitative",
+            "title": "Population",
+            "format": ","
+          }
         ]
       }
     }
