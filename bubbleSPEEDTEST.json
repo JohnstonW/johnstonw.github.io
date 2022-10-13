@@ -48,7 +48,7 @@
     {"filter": "datum.avgPop > Population_Above"},
     {
       "filter": "Continent_selection == null || datum.Continent == Continent_selection"
-    },
+    }
   ],
   "encoding": {
     "x": {
@@ -107,7 +107,7 @@
           {"field": "dSpeed", "type": "quantitative","title": "Avg Download Speed (kB/s)","format": ","},
           {"field": "uSpeed", "type": "quantitative", "title":"Avg Upload Speed (kB/s)", "format": ","},
           {"field": "avgPop", "type": "quantitative", "title":"Population","format": ","},
-          {"field": "Tests", "type": "quantitative", "title":"Number of Tests Taken", "format": ","},
+          {"field": "Tests", "type": "quantitative", "title":"Number of Tests Taken", "format": ","}
         ]
       }
     },
@@ -135,7 +135,7 @@
           {"field": "dSpeed", "type": "quantitative","title": "Avg Download Speed (kB/s)","format": ","},
           {"field": "uSpeed", "type": "quantitative", "title":"Avg Upload Speed (kB/s)", "format": ","},
           {"field": "avgPop", "type": "quantitative", "title":"Population","format": ","},
-          {"field": "Tests", "type": "quantitative", "title":"Number of Tests Taken", "format": ","},
+          {"field": "Tests", "type": "quantitative", "title":"Number of Tests Taken", "format": ","}
         ]
       }
     }
