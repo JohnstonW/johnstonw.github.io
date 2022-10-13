@@ -2,7 +2,7 @@
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
   "width": 600,
   "height": 400,
-  "title": {"text": "Internet Usage (Mar 2022)", "fontSize": 25},
+  "title": {"text": "Internet Usage", "fontSize": 25},
   "data": {
     "url": "https://raw.githubusercontent.com/johnstonw/johnstonw.github.io/main/internetusage.csv"
   },
@@ -115,7 +115,9 @@
         "dx": -12,
         "fontSize": 11.5,
         "fontStyle": "italic"
+        
       },
+
       "encoding": {
         "text": {"field": "Country", "type": "nominal"},
         "color": {"value": "black"},
@@ -147,6 +149,29 @@
             "format": ","
           }
         ]
+      }
+    },
+        {
+      "mark": {
+        "type": "line",
+        "color": "firebrick",
+        "opacity" : "0.5"
+      },
+      "transform": [
+        {
+          "regression": "urbanrate",
+          "on": "internetuserate"
+        }
+      ],
+      "encoding": {
+        "x": {
+          "field": "urbanrate",
+          "type": "quantitative"
+        },
+        "y": {
+          "field": "internetuserate",
+          "type": "quantitative"
+        }
       }
     }
   ]
