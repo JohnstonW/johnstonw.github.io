@@ -1,0 +1,52 @@
+{
+    "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+    "title": "Number of Tests per Continent",
+    "width": 600,
+    "height": 400,
+    "description": "Number of tests per Continent",
+    "data": {
+      "url": "https://raw.githubusercontent.com/johnstonw/johnstonw.github.io/main/fixed_year_2022_quarter_02.csv"
+    },
+    "mark": {"type": "arc", "innerRadius": 60},
+    
+    "encoding": {
+      "theta": {"field": "Tests", "type": "quantitative"},
+      "color": {
+        "field": "Continent",
+        "type": "nominal",
+        "scale": {
+        "domain": ["Americas", "Europe", "Africa", "Asia", "Oceania"],
+          "range": ["#984ea3", "#ff7f00", "#a6cee3", "#377eb8", "#a65628"]
+            }
+          },
+          
+          "tooltip": [
+            {"field": "Country", "type": "nominal"},
+            {
+              "field": "dSpeed",
+              "type": "quantitative",
+              "title": "Avg Download Speed (kB/s)",
+              "format": ","
+            },
+            {
+              "field": "uSpeed",
+              "type": "quantitative",
+              "title": "Avg Upload Speed (kB/s)",
+              "format": ","
+            },
+            {
+              "field": "avgPop",
+              "type": "quantitative",
+              "title": "Population",
+              "format": ","
+            },
+            {
+              "field": "Tests",
+              "type": "quantitative",
+              "title": "Number of Tests Taken",
+              "format": ","
+            }
+          ]
+    }
+  }
+  
