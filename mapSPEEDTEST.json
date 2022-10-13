@@ -16,15 +16,15 @@
           "url": "https://raw.githubusercontent.com/johnstonw/johnstonw.github.io/main/fixed_year_2022_quarter_02.csv"
         },
         "key": "Country",
-        "fields": ["dSpeed"] //make this /1000
+        "fields": ["dSpeed"] 
       }
     },
-    {"calculate": "datum.dSpeed/1000 + 0.1", "as": "Avg Download Speed (mB/s)"}
+    {"calculate": "datum.dSpeed + 0.1", "as": "Avg Download Speed (kB/s)"}
   ],
   "mark": {"type": "geoshape"},
   "encoding": {
     "color": {
-      "field": "Avg Download Speed (mB/s)",
+      "field": "Avg Download Speed (kB/s)",
       "type": "quantitative"
     },
     "tooltip": [
@@ -33,8 +33,8 @@
       "title": "Country"},
       {"field": "dSpeed", 
       "type": "quantitative", 
-      "title": "Average Download Speed (mB/s)",
-      "format": ",.0f",}
+      "title": "Average Download Speed (kB/s)",
+      "format": ",.0f"}
     ]
   }
 }
