@@ -1,6 +1,6 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-  "title": "Number of Internet Speed tests per country",
+  "title": "Average Download Speeds of each country",
   "width": 800,
   "height": 400,
   "projection": {"type": "equalEarth"},
@@ -15,22 +15,21 @@
         "data": {
           "url": "https://raw.githubusercontent.com/johnstonw/johnstonw.github.io/main/fixed_year_2022_quarter_02.csv"
         },
-        "key": "Name",
-        "fields": ["Tests"]
+        "key": "Country",
+        "fields": ["dSpeed"]
       }
     },
-    {"calculate": "datum.Tests + 0.1", "as": "Number of Tests"}
+    {"calculate": "datum.dSpeed + 0.1", "as": "Internet Speed"}
   ],
   "mark": {"type": "geoshape"},
   "encoding": {
     "color": {
-      "field": "Number of Tests",
-      "type": "quantitative",
-      "scale": {"type": "log"}
+      "field": "Internet Speed",
+      "type": "quantitative"
     },
     "tooltip": [
       {"field": "properties.NAME", "type": "nominal", "title": "Country"},
-      {"field": "Tests", "type": "quantitative"}
+      {"field": "dSpeed", "type": "quantitative"}
     ]
   }
 }
