@@ -1,6 +1,6 @@
 {
     "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-    "title": {"text": "Number of Tests per Continent", "fontSize": 25},
+    "title": {"text": "Number of Internet Speed Tests per Continent", "fontSize": 25},
     "width": 800,
     "height": 400,
     "description": "Number of Internet Speed tests per Continent",
