@@ -2,7 +2,7 @@
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
   "width": 600,
   "height": 400,
-  "title": {"text": "Internet Usage", "fontSize": 25},
+  "title": {"text": "Internet Usage (Mar 2022)", "fontSize": 25},
   "data": {
     "url": "https://raw.githubusercontent.com/johnstonw/johnstonw.github.io/main/internetusage.csv"
   },
