@@ -1,6 +1,6 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-  "title": {"text": "Average Download Speeds (Mar 2022)", "fontSize": 25},
+  "title": {"text": "Average Download Speeds (Mar 2022)", "fontSize": 15},
   "width": 600,
   "height": 400,
   "projection": {"type": "equalEarth"},
