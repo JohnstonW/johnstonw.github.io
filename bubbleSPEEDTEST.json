@@ -22,14 +22,7 @@
       "name": "Continent_selection",
       "bind": {
         "input": "select",
-        "options": [
-          null,
-          "Americas",
-          "Europe",
-          "Africa",
-          "Asia",
-          "Oceania"
-        ],
+        "options": [null, "Americas", "Europe", "Africa", "Asia", "Oceania"],
         "labels": [
           "Show All",
           "Americas",
@@ -63,7 +56,7 @@
       "type": "quantitative",
       "title": "Avg Upload Speed (kB/s)",
       "axis": {"tickCount": 6},
-      "scale": {"type": "log", "domain": [1, 1000000]}
+      "scale": {"domain": [1, 200000]}
     }
   },
   "layer": [
@@ -85,29 +78,37 @@
           "field": "Continent",
           "type": "nominal",
           "scale": {
-            "domain": [
-              "Americas",
-              "Europe",
-              "Africa",
-              "Asia",
-              "Oceania"
-            ],
-            "range": [
-              "#984ea3",
-              "#ff7f00",
-              "#a6cee3",
-              "#377eb8",
-              "#a65628"
-            ]
+            "domain": ["Americas", "Europe", "Africa", "Asia", "Oceania"],
+            "range": ["#984ea3", "#ff7f00", "#a6cee3", "#377eb8", "#a65628"]
           }
         },
         "opacity": {"value": 0.6},
         "tooltip": [
           {"field": "Country", "type": "nominal"},
-          {"field": "dSpeed", "type": "quantitative","title": "Avg Download Speed (kB/s)","format": ","},
-          {"field": "uSpeed", "type": "quantitative", "title":"Avg Upload Speed (kB/s)", "format": ","},
-          {"field": "avgPop", "type": "quantitative", "title":"Population","format": ","},
-          {"field": "Tests", "type": "quantitative", "title":"Number of Tests Taken", "format": ","}
+          {
+            "field": "dSpeed",
+            "type": "quantitative",
+            "title": "Avg Download Speed (kB/s)",
+            "format": ","
+          },
+          {
+            "field": "uSpeed",
+            "type": "quantitative",
+            "title": "Avg Upload Speed (kB/s)",
+            "format": ","
+          },
+          {
+            "field": "avgPop",
+            "type": "quantitative",
+            "title": "Population",
+            "format": ","
+          },
+          {
+            "field": "Tests",
+            "type": "quantitative",
+            "title": "Number of Tests Taken",
+            "format": ","
+          }
         ]
       }
     },
@@ -132,10 +133,30 @@
         },
         "tooltip": [
           {"field": "Country", "type": "nominal"},
-          {"field": "dSpeed", "type": "quantitative","title": "Avg Download Speed (kB/s)","format": ","},
-          {"field": "uSpeed", "type": "quantitative", "title":"Avg Upload Speed (kB/s)", "format": ","},
-          {"field": "avgPop", "type": "quantitative", "title":"Population","format": ","},
-          {"field": "Tests", "type": "quantitative", "title":"Number of Tests Taken", "format": ","}
+          {
+            "field": "dSpeed",
+            "type": "quantitative",
+            "title": "Avg Download Speed (kB/s)",
+            "format": ","
+          },
+          {
+            "field": "uSpeed",
+            "type": "quantitative",
+            "title": "Avg Upload Speed (kB/s)",
+            "format": ","
+          },
+          {
+            "field": "avgPop",
+            "type": "quantitative",
+            "title": "Population",
+            "format": ","
+          },
+          {
+            "field": "Tests",
+            "type": "quantitative",
+            "title": "Number of Tests Taken",
+            "format": ","
+          }
         ]
       }
     }
