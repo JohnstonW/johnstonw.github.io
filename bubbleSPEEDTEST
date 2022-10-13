@@ -49,10 +49,6 @@
     {
       "filter": "Continent_selection == null || datum.Continent == Continent_selection"
     },
-    {
-      "calculate": "datum.Confirmed/datum.avgPop * 10000",
-      "as": "Speeds per 10,000 Population"
-    }
   ],
   "encoding": {
     "x": {
@@ -80,7 +76,7 @@
           "title": "Population",
           "scale": {
             "type": "threshold",
-            "domain": [1000000, 10000000, 50000000, 100000000, 500000000],
+            "domain": [10000, 1000000, 5000000, 10000000, 500000000],
             "range": [10, 50, 150, 200, 300, 400]
           },
           "legend": {"format": ".1s"}
@@ -108,15 +104,10 @@
         "opacity": {"value": 0.6},
         "tooltip": [
           {"field": "Country", "type": "nominal"},
-          {"field": "dSpeed", "type": "quantitative", "format": ","},
-          {"field": "Active", "type": "quantitative", "format": ","},
-          {"field": "uSpeed", "type": "quantitative", "format": ","},
-          {"field": "Recovered", "type": "quantitative", "format": ","},
-          {
-            "field": "Speeds per 10,000 Population",
-            "type": "quantitative",
-            "format": ".2f"
-          }
+          {"field": "dSpeed", "type": "quantitative","title": "Avg Download Speed (kB/s)","format": ","},
+          {"field": "uSpeed", "type": "quantitative", "title":"Avg Upload Speed (kB/s)", "format": ","},
+          {"field": "avgPop", "type": "quantitative", "title":"Population","format": ","},
+          {"field": "Tests", "type": "quantitative", "title":"Number of Tests Taken", "format": ","},
         ]
       }
     },
@@ -141,15 +132,10 @@
         },
         "tooltip": [
           {"field": "Country", "type": "nominal"},
-          {"field": "Confirmed", "type": "quantitative", "format": ","},
-          {"field": "Active", "type": "quantitative", "format": ","},
-          {"field": "Deaths", "type": "quantitative", "format": ","},
-          {"field": "Recovered", "type": "quantitative", "format": ","},
-          {
-            "field": "Cases per 10,000 Population",
-            "type": "quantitative",
-            "format": ".2f"
-          }
+          {"field": "dSpeed", "type": "quantitative","title": "Avg Download Speed (kB/s)","format": ","},
+          {"field": "uSpeed", "type": "quantitative", "title":"Avg Upload Speed (kB/s)", "format": ","},
+          {"field": "avgPop", "type": "quantitative", "title":"Population","format": ","},
+          {"field": "Tests", "type": "quantitative", "title":"Number of Tests Taken", "format": ","},
         ]
       }
     }
