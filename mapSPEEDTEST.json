@@ -28,8 +28,13 @@
       "type": "quantitative"
     },
     "tooltip": [
-      {"field": "properties.NAME", "type": "nominal", "title": "Country"},
-      {"field": "dSpeed", "type": "quantitative"}
+      {"field": "properties.NAME", 
+      "type": "nominal", 
+      "title": "Country"},
+      {"field": "dSpeed", 
+      "type": "quantitative", 
+      "title": "Average Download Speed (kB/s)",
+      "format": ",.0f",}
     ]
   }
 }
