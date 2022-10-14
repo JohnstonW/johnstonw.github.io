@@ -76,6 +76,7 @@
         },
         "color": {
           "field": "Continent",
+          "title": "Continent",
           "type": "nominal",
           "scale": {
             "domain": ["Americas", "Europe", "Africa", "Asia", "Oceania"],
