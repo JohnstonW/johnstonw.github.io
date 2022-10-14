@@ -4,7 +4,7 @@
     "text": "Number of Internet Speed Tests per Continent",
     "fontSize": 25
   },
-  "width": 800,
+  "width": 600,
   "height": 400,
   "description": "Number of Internet Speed tests per Continent",
   "data": {
@@ -22,8 +22,8 @@
       },
       "legend": {
         "orient": "none",
-        "legendX": 30,
-        "legendY": 30,
+        "legendX": 15,
+        "legendY": 15,
         "fillColor": "white",
         "strokeColor": "black",
         "padding": 10,
@@ -61,7 +61,7 @@
   },
 
   "layer": [{
-  "mark": {"type": "bar"}
+  "mark": {"type": "bar"},
   },
   {
       "mark": {
@@ -76,7 +76,7 @@
         "color": {"value": "white"},
         "opacity": {
           "condition": {
-            "test": "datum['Country'] == 'India' || datum['Country'] == 'China' || datum['Country'] == 'Australia'|| datum['Country'] == 'United Kingdom' || datum['Country'] == 'Italy' ||  datum['Country'] == 'United States of America'",
+            "test": "datum['Country'] == 'India' || datum['Country'] == 'Philippines' || datum['Country'] == 'Australia'|| datum['Country'] == 'United Kingdom' || datum['Country'] == 'Italy' ||  datum['Country'] == 'United States'",
             "value": 1
           },
           "value": 0
