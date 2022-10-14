@@ -67,7 +67,7 @@
             </div>
             <div class="pure-u-1-24"></div>
             <div class = "pure-u-14-24">
-                <div id="bar_tests"></div>
+                <div id="vis_bar"></div>
             </div>
         </div>
         
@@ -151,8 +151,8 @@
     // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
   }).catch(console.error);
 
-  var bar_tests = "https://raw.githubusercontent.com/johnstonw/johnstonw.github.io/main/barNUMTESTS.json";
-    vegaEmbed('#bar_tests',bar_tests).then(function(result){
+  var bar_spec = "https://raw.githubusercontent.com/johnstonw/johnstonw.github.io/main/barNUMTESTS.json";
+    vegaEmbed('#vis_bar',bar_spec).then(function(result){
     // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
   }).catch(console.error);
     
