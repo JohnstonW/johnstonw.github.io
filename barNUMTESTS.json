@@ -62,26 +62,6 @@
 
   "layer": [{
   "mark": {"type": "bar"},
-  },
-  {
-      "mark": {
-      "type": "text",
-       "baseline": "middle",
-        "align": "center",
-        "fontSize": 11.5,
-        "fontStyle": "italic"
-      },
-      "encoding": {
-        "text": {"field": "Country", "type": "nominal"},
-        "color": {"value": "white"},
-        "opacity": {
-          "condition": {
-            "test": "datum['Country'] == 'India' || datum['Country'] == 'Philippines' || datum['Country'] == 'Australia'|| datum['Country'] == 'United Kingdom' || datum['Country'] == 'Italy' ||  datum['Country'] == 'United States'",
-            "value": 1
-          },
-          "value": 0
-        }
-      }
   }
 ]
 }
