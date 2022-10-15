@@ -1,12 +1,12 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
   "title": {
-    "text": "Number of Internet Speed Tests per Continent",
+    "text": "Number of Internet Speed Tests (Mar 2022)",
     "fontSize": 25
   },
   "width": 600,
   "height": 400,
-  "description": "Number of Internet Speed tests per Continent",
+  "description": "Number of Internet Speed Tests (Mar 2022)",
   "data": {
     "url": "https://raw.githubusercontent.com/johnstonw/johnstonw.github.io/main/numberoftestsCLEANED.csv"
   },
